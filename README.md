@@ -1,4 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Onboarding Tutorial for Next.js, React, Web BLE, File System Access, and Performance Patterns
+
+This repository contains minimal, runnable examples demonstrating core concepts of React, Next.js, Web Bluetooth, File System Access API, and performance patterns.
+
+## Prerequisites
+- Node.js
+- npm/yarn
+
+## Setup
+Run the following command to install dependencies:
+```
+npm install
+```
+or
+```
+yarn install
+```
+
+## Run
+Start the development server with:
+```
+npm run dev
+```
+or
+```
+yarn dev
+```
+
+## Tutorial Sections
+- [React Core Concepts](./src/app/01-react-core/README.md)
+- [Next.js Concepts](./src/app/02-nextjs-concepts/README.md)
+- [Web Bluetooth API](./src/app/03-web-bluetooth/README.md)
+- [File System Access API](./src/app/04-file-system-access/README.md)
+- [Performance & Concurrency](./src/app/05-performance-concurrency/README.md)
+- [Tools & Libraries](./src/app/06-tools-libraries/README.md)
 
 ## Getting Started
 
