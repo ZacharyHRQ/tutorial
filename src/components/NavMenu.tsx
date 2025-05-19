@@ -2,23 +2,36 @@
 
 import Link from 'next/link';
 
+const tutorialSections = [
+  { path: '/01-react-core/state-effect-ref', label: 'React Core: State, Effect, Ref' },
+  { path: '/01-react-core/re-renders', label: 'React Core: Re-renders' },
+  { path: '/02-nextjs-concepts/routing-layouts', label: 'Next.js: Routing & Layouts' },
+  { path: '/02-nextjs-concepts/client-server-components', label: 'Next.js: Client & Server Components' },
+  { path: '/02-nextjs-concepts/api/basic-ble-sync', label: 'Next.js: Basic BLE Sync API' },
+  { path: '/03-web-bluetooth', label: 'Web Bluetooth API' },
+  { path: '/04-file-system-access', label: 'File System Access API' },
+  { path: '/05-performance-concurrency/web-workers', label: 'Performance: Web Workers' },
+  { path: '/05-performance-concurrency/data-batching', label: 'Performance: Data Batching' },
+  { path: '/05-performance-concurrency/throttle-debounce', label: 'Performance: Throttle & Debounce' },
+  { path: '/05-performance-concurrency/mutex-patterns', label: 'Performance: Mutex Patterns' },
+  { path: '/06-tools-libraries/zustand-state', label: 'Tools: Zustand State' },
+  { path: '/06-tools-libraries/react-use-example', label: 'Tools: React Use Example' },
+];
+
 export default function NavMenu() {
   return (
-    <nav>
-      <ul>
-        <li><Link href="/01-react-core/state-effect-ref">React Core: State, Effect, Ref</Link></li>
-        <li><Link href="/01-react-core/re-renders">React Core: Re-renders</Link></li>
-        <li><Link href="/02-nextjs-concepts/routing-layouts">Next.js: Routing & Layouts</Link></li>
-        <li><Link href="/02-nextjs-concepts/client-server-components">Next.js: Client & Server Components</Link></li>
-        <li><Link href="/02-nextjs-concepts/api/basic-ble-sync">Next.js: Basic BLE Sync API</Link></li>
-        <li><Link href="/03-web-bluetooth">Web Bluetooth API</Link></li>
-        <li><Link href="/04-file-system-access">File System Access API</Link></li>
-        <li><Link href="/05-performance-concurrency/web-workers">Performance: Web Workers</Link></li>
-        <li><Link href="/05-performance-concurrency/data-batching">Performance: Data Batching</Link></li>
-        <li><Link href="/05-performance-concurrency/throttle-debounce">Performance: Throttle & Debounce</Link></li>
-        <li><Link href="/05-performance-concurrency/mutex-patterns">Performance: Mutex Patterns</Link></li>
-        <li><Link href="/06-tools-libraries/zustand-state">Tools: Zustand State</Link></li>
-        <li><Link href="/06-tools-libraries/react-use-example">Tools: React Use Example</Link></li>
+    <nav className="p-4">
+      <ul className="space-y-2">
+        {tutorialSections.map((section) => (
+          <li key={section.path}>
+            <Link 
+              href={section.path}
+              className="text-blue-600 hover:text-blue-800 hover:underline"
+            >
+              {section.label}
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );
